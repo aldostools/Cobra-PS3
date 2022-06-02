@@ -1939,7 +1939,7 @@ int process_cd_iso_scsi_cmd(uint8_t *indata, uint64_t inlen, uint8_t *outdata, u
 			}
 			else
 			{
-				uint8_t *p = buf;
+				uint8_t *p = buf; extend_kstack(0);
 
 				for (int i = 0; i < length; i++)
 				{
